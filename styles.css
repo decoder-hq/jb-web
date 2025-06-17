@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
   user-select: none;
   animation: fadeIn 0.5s forwards;
+  color: white;
 }
 
 @keyframes fadeIn {
@@ -47,21 +48,6 @@ body {
   100% {
     opacity: 100;
   }
-}
-
-/* * {
-  scroll-margin-top: 2rem;
-} */
-
-.content {
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  user-select: none;
 }
 
 .header {
@@ -309,11 +295,12 @@ body {
 
 section {
   width: 100%;
+  height: calc(100vh - 86px);
+  margin-top: 86px;
 }
 
 .home {
   width: 100%;
-  height: 100vh;
   display: flex;
 }
 

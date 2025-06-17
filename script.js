@@ -221,7 +221,7 @@ anime.timeline({ loop: false })
 function homeSection() {
     hamburger.classList.remove('active')
     header.classList.remove('expand');
-    home.scrollIntoView()
+    window.scrollTo(0,0)
 }
 
 function aboutSection() {
@@ -274,74 +274,6 @@ function loadShow() {
     if (active <= 4) {
         nextBtn.disabled = false
     }
-
-    if (active < 1) {
-        items[0].classList.remove('left')
-        items[0].classList.add('center')
-        items[1].classList.remove('center')
-        items[1].classList.add('right')
-        items[2].classList.remove('right')
-    }
-
-    // if (active == 1) {
-    //     // console.log(active)
-    //     items[0].classList.remove('center')
-    //     items[0].classList.add('left')
-    //     items[1].classList.remove('right')
-    //     items[1].classList.remove('left')
-    //     items[1].classList.add('center')
-    //     items[2].classList.remove('center')
-    //     items[2].classList.add('right')
-    //     items[3].classList.remove('right')
-    // }
-
-    // if (active == 2) {
-    //     // console.log(active)
-    //     items[0].classList.remove('left')
-    //     items[1].classList.remove('center')
-    //     items[1].classList.add('left')
-    //     items[2].classList.remove('right')
-    //     items[2].classList.remove('left')
-    //     items[2].classList.add('center')
-    //     items[3].classList.remove('center')
-    //     items[3].classList.add('right')
-    //     items[4].classList.remove('right')
-    // }
-
-    // if (active == 3) {
-    //     // console.log(active)
-    //     items[1].classList.remove('left')
-    //     items[2].classList.remove('left')
-    //     items[2].classList.remove('center')
-    //     items[2].classList.add('left')
-    //     items[3].classList.remove('right')
-    //     items[3].classList.remove('left')
-    //     items[3].classList.add('center')
-    //     items[4].classList.remove('center')
-    //     items[4].classList.add('right')
-    //     items[5].classList.remove('center')
-    //     items[5].classList.remove('right')
-    // }
-    // if (active == 4) {
-    //     // console.log(active)
-    //     items[2].classList.remove('left')
-    //     items[3].classList.remove('center')
-    //     items[3].classList.add('left')
-    //     items[4].classList.remove('right')
-    //     items[4].classList.remove('left')
-    //     items[4].classList.add('center')
-    //     items[5].classList.remove('center')
-    //     items[5].classList.add('right')
-    // }
-
-    // if (active == 5) {
-    //     // console.log(active)
-    //     items[3].classList.remove('left')
-    //     items[4].classList.remove('center')
-    //     items[4].classList.add('left')
-    //     items[5].classList.remove('right')
-    //     items[5].classList.add('center')
-    // }
 }
 
 loadShow()
