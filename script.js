@@ -7,8 +7,8 @@ const hamburger = document.querySelector('.hamburger');
 const home = document.querySelector(".home")
 const about = document.querySelector(".about")
 const parent = document.querySelector('.parent');
-const parentHeading = document.querySelector('.aboutHeading')
-const subHeading = document.querySelector('#sub-heading')
+const parentHeading = document.querySelector('.about-heading')
+const subHeading = document.querySelector('.sub-heading')
 const catalogue = document.querySelector(".catalogue")
 const contact = document.querySelector(".contact")
 
@@ -157,7 +157,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             toggleActions: "play none reverse none",
         }
     })
-
 });
 
 window.addEventListener('scroll', () => {
@@ -221,7 +220,7 @@ anime.timeline({ loop: false })
 function homeSection() {
     hamburger.classList.remove('active')
     header.classList.remove('expand');
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
 }
 
 function aboutSection() {

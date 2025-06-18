@@ -295,8 +295,7 @@ body {
 
 section {
   width: 100%;
-  height: calc(100vh - 86px);
-  margin-top: 86px;
+  height: 100vh;
 }
 
 .home {
@@ -623,7 +622,7 @@ section {
   border-radius: 50%;
   cursor: pointer;
   transition: 0.5s;
-
+  -webkit-tap-highlight-color: transparent;
 }
 
 .buttons button[disabled] {
@@ -639,7 +638,7 @@ i {
 .item {
   width: 250px;
   margin: 0 auto;
-  height: 85%;
+  height: 80%;
   background-color: rgba(0, 0, 0, 0.534);
   border-radius: 5px;
   position: absolute;
@@ -675,12 +674,11 @@ i {
 
 .img-5,
 .img-6 {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 88%;
+  max-height: 88%;
 }
 
 .item-description {
-  height: 20%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.658);
   position: absolute;
@@ -696,9 +694,6 @@ i {
 }
 
 @media(max-width:768px) {
-  body {
-    overflow-x: hidden;
-  }
 
   .header.expand {
     height: 300px;
@@ -867,24 +862,34 @@ i {
 
   .parent {
     gap: 0;
+    position: relative;
+  }
+
+  .child-1 {
+    width: 100%;
   }
 
   .about-heading {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .sub-heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .para-1,
   .para-2,
   .para-3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    width: 80%;
   }
 
   .image {
-    padding-right: 2rem;
+    height: 300px;
+    width: 15%;
+    position: absolute;
+    right: 3%;
+    padding-top: 10rem;
   }
 
   .image img {
@@ -892,32 +897,38 @@ i {
   }
 
   .cat-heading {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .cat-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
-  .item{
+  .item {
     scale: 0.8;
+  }
+
+    .buttons {
+    bottom: 4rem;
   }
 
 }
 
 @media(max-width:500px) {
+
   .about-heading {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .sub-heading {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
 
   .para-1,
   .para-2,
   .para-3 {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
+    width: 80%;
   }
 
   .image img {
@@ -925,15 +936,19 @@ i {
   }
 
   .cat-heading {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .cat-description {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
   }
 
-  .item{
+  .item {
     scale: 0.68;
+  }
+
+  .buttons {
+    bottom: 6rem;
   }
 
 }
