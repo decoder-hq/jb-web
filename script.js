@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
-    gsap.from('.slider', {
+    gsap.from('.swiper', {
         y: 100,
         rotateX: -45,
         opacity: 0,
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         delay: 0.6,
         ease: "circ.out",
         scrollTrigger: {
-            trigger: '.slider',
+            trigger: '.swiper',
             start: "top 90%",
             end: "top 98%",
             toggleActions: "play none reverse none",
@@ -235,57 +235,78 @@ function catalogueSection() {
     catalogue.scrollIntoView()
 }
 
-const items = document.querySelectorAll('.slider .item');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+// const items = document.querySelectorAll('.slider .item');
+// const prevBtn = document.querySelector('.prev');
+// const nextBtn = document.querySelector('.next');
 
-let active = 3
+// let active = 3
 
-function loadShow() {
-    let display = 0
-    items[active].style.transform = `none`;
-    items[active].style.filter = 'none';
-    items[active].style.opacity = 1;
-    for (var i = active + 1; i < items.length; i++) {
-        display++;
-        items[i].style.transform = `translateX(${250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(1deg)`;
-        items[i].style.filter = 'blur(1px)';
-        items[i].style.opacity = display > 1 ? 0 : 0.6;
+// function loadShow() {
+//     let display = 0
+//     items[active].style.transform = `none`;
+//     items[active].style.filter = 'none';
+//     items[active].style.opacity = 1;
+//     for (var i = active + 1; i < items.length; i++) {
+//         display++;
+//         items[i].style.transform = `translateX(${250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(1deg)`;
+//         items[i].style.filter = 'blur(1px)';
+//         items[i].style.opacity = display > 1 ? 0 : 0.6;
+//     }
+
+//     display = 0
+//     for (var i = active - 1; i >= 0; i--) {
+//         display++;
+//         items[i].style.transform = `translateX(${-250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(-1deg)`;
+//         items[i].style.filter = 'blur(1px)';
+//         items[i].style.opacity = display > 1 ? 0 : 0.6;
+//     }
+
+//     if (active < 1) {
+//         prevBtn.disabled = true
+//     }
+//     if (active >= 1) {
+//         prevBtn.disabled = false
+//     }
+//     if (active > 4) {
+//         nextBtn.disabled = true
+//     }
+//     if (active <= 4) {
+//         nextBtn.disabled = false
+//     }
+// }
+
+// loadShow()
+
+// function prev() {
+//     active = active - 1 >= 0 ? active - 1 : active;
+//     loadShow()
+// }
+
+// function next() {
+//     active = active + 1 < items.length ? active + 1 : active;
+//     loadShow();
+// }
+
+var swiper = new Swiper(".swiper", {
+    effect: 'coverflow',
+    roundLengths:true,
+    grabCursor: true,
+    centeredSlides:true,
+    initialSlide: 3,
+    slidesPerView: 'auto',
+    preventClicks: true,
+    speed: 800,
+    spaceBetween: 0,
+    coverflowEffect: {
+        rotate: 40,
+        slideShadows: true,
+    },
+    on: {
+        click(event){
+            swiper.slideTo(this.clickedIndex)
+        },
     }
-
-    display = 0
-    for (var i = active - 1; i >= 0; i--) {
-        display++;
-        items[i].style.transform = `translateX(${-250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(-1deg)`;
-        items[i].style.filter = 'blur(1px)';
-        items[i].style.opacity = display > 1 ? 0 : 0.6;
-    }
-
-    if (active < 1) {
-        prevBtn.disabled = true
-    }
-    if (active >= 1) {
-        prevBtn.disabled = false
-    }
-    if (active > 4) {
-        nextBtn.disabled = true
-    }
-    if (active <= 4) {
-        nextBtn.disabled = false
-    }
-}
-
-loadShow()
-
-function prev() {
-    active = active - 1 >= 0 ? active - 1 : active;
-    loadShow()
-}
-
-function next() {
-    active = active + 1 < items.length ? active + 1 : active;
-    loadShow();
-}
+});
 
 
 
