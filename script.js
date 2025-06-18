@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         rotateX: -45,
         opacity: 0,
         duration: 1.2,
-        delay: 1,
+        delay: 0.6,
         ease: "circ.out",
         scrollTrigger: {
             trigger: '.slider',
