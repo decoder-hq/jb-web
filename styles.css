@@ -157,6 +157,8 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .phone svg {
@@ -434,6 +436,7 @@ section {
   background-color: rgba(0, 0, 0, 0.178);
   border-radius: 10px;
   animation: grow 1.5s ease-in-out forwards;
+  -webkit-tap-highlight-color: transparent;
   /* button */
 
   .link {
@@ -503,7 +506,6 @@ section {
       left: 0;
       bottom: 0px;
       border-radius: 10px;
-
     }
 
     .link {
@@ -781,6 +783,14 @@ i {
     display: none;
     animation: none;
   }
+  
+  .contact span{
+    font-size: 0.9rem;
+  }
+
+  .phone svg {
+    margin-right: 5px;
+  }
 
   .header.expand .contact {
     display: block;
@@ -888,7 +898,7 @@ i {
     height: 300px;
     width: 15%;
     position: absolute;
-    right: 3%;
+    right: 5%;
     padding-top: 10rem;
   }
 
@@ -908,7 +918,7 @@ i {
     scale: 0.8;
   }
 
-    .buttons {
+  .buttons {
     bottom: 4rem;
   }
 
@@ -929,6 +939,10 @@ i {
   .para-3 {
     font-size: 0.8rem;
     width: 80%;
+  }
+
+  .image {
+    right: 6%;
   }
 
   .image img {
