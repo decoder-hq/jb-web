@@ -169,25 +169,23 @@ hamburger.addEventListener('click', function () {
     header.classList.toggle('expand');
 })
 
-window.addEventListener("load", () => {
-    var caption1 = document.querySelector('.caption-1');
-    caption1.innerHTML = caption1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var caption1 = document.querySelector('.caption-1');
+caption1.innerHTML = caption1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    anime.timeline({ loop: false })
-        .add({
-            targets: '.caption-1 .letter',
-            translateX: [40, 0],
-            translateZ: 0,
-            opacity: [0, 1],
-            easing: "easeOutExpo",
-            duration: 2500,
-            delay: (el, i) => 500 + 60 * i
-        })
-    setTimeout(() => {
-        caption1.innerHTML = "Get water<span class='word'>clean</span> <span class='word'>fresh</span> <span class='word'>pure</span>"
-        caption1.classList.add('spacing')
-    }, 3000)
-})
+anime.timeline({ loop: false })
+    .add({
+        targets: '.caption-1 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 2500,
+        delay: (el, i) => 500 + 60 * i
+    })
+setTimeout(() => {
+    caption1.innerHTML = "Get water<span class='word'>clean</span> <span class='word'>fresh</span> <span class='word'>pure</span>"
+    caption1.classList.add('spacing')
+}, 3000)
 
 var caption2 = document.querySelector('.caption-2');
 caption2.innerHTML = caption2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -289,9 +287,9 @@ function catalogueSection() {
 
 var swiper = new Swiper(".swiper", {
     effect: 'coverflow',
-    roundLengths:true,
+    roundLengths: true,
     grabCursor: true,
-    centeredSlides:true,
+    centeredSlides: true,
     initialSlide: 3,
     slidesPerView: 'auto',
     preventClicks: true,
@@ -302,7 +300,7 @@ var swiper = new Swiper(".swiper", {
         slideShadows: true,
     },
     on: {
-        click(event){
+        click(event) {
             swiper.slideTo(this.clickedIndex)
         },
     }

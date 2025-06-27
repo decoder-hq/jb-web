@@ -319,6 +319,7 @@ section {
   margin: 0;
   position: relative;
   filter: contrast(25) blur(0px);
+  will-change: transform;
 }
 
 .spacing {
@@ -364,13 +365,14 @@ section {
 .caption-2 {
   font-size: 20px;
   margin-top: 0;
+  will-change: transform;
 }
-
 
 .brand-name {
   font-size: 50px;
   margin: 0;
   font-weight: 600;
+  will-change: transform;
 }
 
 .caption-1 .letter {
@@ -720,12 +722,12 @@ i {
     transition: all 0.5s ease;
   }
 
-  .header.active.expand{
+  .header.active.expand {
     height: 280px;
     transition: all 0.5s ease;
   }
 
-  .nav-links{
+  .nav-links {
     display: none;
   }
 
@@ -801,8 +803,8 @@ i {
     display: none;
     animation: none;
   }
-  
-  .contact span{
+
+  .contact span {
     font-size: 0.9rem;
   }
 
@@ -932,7 +934,7 @@ i {
     font-size: 1rem;
   }
 
-  
+
 
   /* .item {
     scale: 0.8;
@@ -993,7 +995,7 @@ i {
     bottom: 6rem;
   } */
 
-   .swiper-slide {
+  .swiper-slide {
     width: 200px !important;
   }
 
