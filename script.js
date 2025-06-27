@@ -295,7 +295,7 @@ var swiper = new Swiper(".swiper", {
     initialSlide: 3,
     slidesPerView: 'auto',
     preventClicks: true,
-    speed: 800,
+    speed: 400,
     spaceBetween: 0,
     coverflowEffect: {
         rotate: 40,
