@@ -36,7 +36,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   user-select: none;
-  animation: fadeIn 0.5s forwards;
+  
   color: white;
 }
 
@@ -363,8 +363,6 @@ section {
 
 .caption-2 {
   font-size: 20px;
-  margin: 0;
-  margin-bottom: 1rem;
   margin-top: -1rem;
 }
 
@@ -721,13 +719,17 @@ i {
     transition: all 0.5s ease;
   }
 
-  .header.active.expand {
+  .header.active.expand{
     height: 280px;
     transition: all 0.5s ease;
   }
 
-  .nav-links {
+  .nav-links{
     display: none;
+  }
+
+  .nav-links li{
+    width: 90vw;
   }
 
   .nav-links li:nth-of-type(1) {
