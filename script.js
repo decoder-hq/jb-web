@@ -15,21 +15,15 @@ const loc = document.querySelector(".contact-1")
 const email = document.querySelector(".contact-2")
 const insta = document.querySelector(".contact-3")
 
-
-
 var isActive = false
-
-// window.onscroll = function(e){
-//     if(window.pageYOffset > 2000){
-//         loc.classList.add('first')
-//     }
-// }
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
     header.classList.toggle('active', window.scrollY > 0);
 
     gsap.registerPlugin(ScrollTrigger)
+
+    ScrollTrigger.normalizeScroll(true);
 
     ScrollTrigger.defaults({
         toggleActions: "play none reverse none",
@@ -396,7 +390,3 @@ var swiper = new Swiper(".swiper", {
         },
     }
 });
-
-
-
-
