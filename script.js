@@ -183,12 +183,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.fa-location-dot',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
+            markers: true
         }
     })
 
-     gsap.from('.text-1', {
+    gsap.from('.text-1', {
         y: 50,
         rotateX: -90,
         skewX: 10,
@@ -198,8 +199,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -213,8 +214,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -228,8 +229,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -243,8 +244,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -258,8 +259,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -273,8 +274,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
@@ -288,8 +289,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         clearProps: "all",
         scrollTrigger: {
             trigger: '.text-1',
-            start: "top 85%",
-            end: "top 85%",
+            start: "top 95%",
+            end: "top 95%",
         }
     })
 
