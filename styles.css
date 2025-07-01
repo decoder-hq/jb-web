@@ -1095,6 +1095,10 @@ i {
     width: 200px !important;
   }
 
+  .con-heading {
+    font-size: 1.2rem;
+  }
+
 }
 
 .video {
