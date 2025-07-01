@@ -10,11 +10,14 @@ const parent = document.querySelector('.parent');
 const parentHeading = document.querySelector('.about-heading')
 const subHeading = document.querySelector('.sub-heading')
 const catalogue = document.querySelector(".catalogue")
-const contact = document.querySelector(".contact")
+const footer = document.querySelector(".footer")
 
 var isActive = false
 
 document.addEventListener("DOMContentLoaded", (event) => {
+
+    header.classList.toggle('active', window.scrollY > 0);
+
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.from('.about-heading', {
@@ -157,6 +160,90 @@ document.addEventListener("DOMContentLoaded", (event) => {
             toggleActions: "play none reverse none",
         }
     })
+
+    gsap.from('.con-heading', {
+        y: 100,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.2,
+        ease: "circ.out",
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 85%",
+            end: "top 85%",
+            toggleActions: "play none reverse none",
+        }
+    })
+
+    gsap.from('.contact-1', {
+        y: 20,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.3,
+        ease: "circ.out",
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 85%",
+            end: "top 85%",
+            toggleActions: "play none reverse none",
+        }
+    })
+
+    gsap.from('.contact-2', {
+        y: 20,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.4,
+        ease: "circ.out",
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 85%",
+            end: "top 85%",
+            toggleActions: "play none reverse none",
+        }
+    })
+
+    gsap.from('.contact-3', {
+        y: 20,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.5,
+        ease: "circ.out",
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 85%",
+            end: "top 85%",
+            toggleActions: "play none reverse none",
+        }
+    })
+
+    gsap.from('.owner', {
+        y: 20,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.6,
+        ease: "circ.out",
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 85%",
+            end: "top 85%",
+            toggleActions: "play none reverse none",
+        }
+    })
 });
 
 window.addEventListener('scroll', () => {
@@ -233,57 +320,11 @@ function catalogueSection() {
     catalogue.scrollIntoView()
 }
 
-// const items = document.querySelectorAll('.slider .item');
-// const prevBtn = document.querySelector('.prev');
-// const nextBtn = document.querySelector('.next');
-
-// let active = 3
-
-// function loadShow() {
-//     let display = 0
-//     items[active].style.transform = `none`;
-//     items[active].style.filter = 'none';
-//     items[active].style.opacity = 1;
-//     for (var i = active + 1; i < items.length; i++) {
-//         display++;
-//         items[i].style.transform = `translateX(${250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(1deg)`;
-//         items[i].style.filter = 'blur(1px)';
-//         items[i].style.opacity = display > 1 ? 0 : 0.6;
-//     }
-
-//     display = 0
-//     for (var i = active - 1; i >= 0; i--) {
-//         display++;
-//         items[i].style.transform = `translateX(${-250 * display}px) scale(${1 - 0.2 * display}) perspective(16px) rotateY(-1deg)`;
-//         items[i].style.filter = 'blur(1px)';
-//         items[i].style.opacity = display > 1 ? 0 : 0.6;
-//     }
-
-//     if (active < 1) {
-//         prevBtn.disabled = true
-//     }
-//     if (active >= 1) {
-//         prevBtn.disabled = false
-//     }
-//     if (active > 4) {
-//         nextBtn.disabled = true
-//     }
-//     if (active <= 4) {
-//         nextBtn.disabled = false
-//     }
-// }
-
-// loadShow()
-
-// function prev() {
-//     active = active - 1 >= 0 ? active - 1 : active;
-//     loadShow()
-// }
-
-// function next() {
-//     active = active + 1 < items.length ? active + 1 : active;
-//     loadShow();
-// }
+function footerSection() {
+    hamburger.classList.remove('active')
+    header.classList.remove('expand');
+    footer.scrollIntoView()
+}
 
 var swiper = new Swiper(".swiper", {
     effect: 'coverflow',
