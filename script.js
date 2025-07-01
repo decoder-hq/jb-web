@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             trigger: '.fa-location-dot',
             start: "top 95%",
             end: "top 95%",
-            markers: true
         }
     })
 
