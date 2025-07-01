@@ -11,14 +11,30 @@ const parentHeading = document.querySelector('.about-heading')
 const subHeading = document.querySelector('.sub-heading')
 const catalogue = document.querySelector(".catalogue")
 const footer = document.querySelector(".footer")
+const loc = document.querySelector(".contact-1")
+const email = document.querySelector(".contact-2")
+const insta = document.querySelector(".contact-3")
+
+
 
 var isActive = false
+
+// window.onscroll = function(e){
+//     if(window.pageYOffset > 2000){
+//         loc.classList.add('first')
+//     }
+// }
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
     header.classList.toggle('active', window.scrollY > 0);
 
     gsap.registerPlugin(ScrollTrigger)
+
+    ScrollTrigger.defaults({
+        toggleActions: "play none reverse none",
+        ease: "circ.out",
+    })
 
     gsap.from('.about-heading', {
         y: 100,
@@ -27,12 +43,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.2,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.about-heading',
             start: "top 90%",
             end: "bottom 90%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -43,12 +57,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.2,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.sub-heading',
             start: "top 90%",
             end: "bottom 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -59,12 +71,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1,
         delay: 0.3,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.para-1',
             start: "top 90%",
             end: "bottom 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -75,12 +85,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1,
         delay: 0.4,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.para-2',
             start: "top 90%",
             end: "bottom 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -91,12 +99,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1,
         delay: 0.5,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.para-3',
             start: "top 95%",
             end: "bottom 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -105,12 +111,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1,
         delay: 0.3,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.para-1',
             start: "top 90%",
             end: "top 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -121,12 +125,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.2,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.cat-heading',
             start: "top 90%",
             end: "bottom 90%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -137,12 +139,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.4,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.cat-description',
             start: "top 90%",
             end: "bottom 95%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -152,12 +152,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.6,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.swiper',
             start: "top 90%",
             end: "top 98%",
-            toggleActions: "play none reverse none",
         }
     })
 
@@ -168,82 +166,133 @@ document.addEventListener("DOMContentLoaded", (event) => {
         opacity: 0,
         duration: 1.2,
         delay: 0.2,
-        ease: "circ.out",
         scrollTrigger: {
             trigger: '.footer',
             start: "top 85%",
             end: "top 85%",
-            toggleActions: "play none reverse none",
         }
     })
 
-    gsap.from('.contact-1', {
-        y: 20,
+    gsap.from('.fa-location-dot', {
+        y: 50,
         rotateX: -90,
         skewX: 10,
         opacity: 0,
         duration: 1.2,
         delay: 0.3,
-        ease: "circ.out",
         clearProps: "all",
         scrollTrigger: {
-            trigger: '.footer',
+            trigger: '.fa-location-dot',
             start: "top 85%",
             end: "top 85%",
-            toggleActions: "play none reverse none",
         }
     })
 
-    gsap.from('.contact-2', {
-        y: 20,
+     gsap.from('.text-1', {
+        y: 50,
         rotateX: -90,
         skewX: 10,
         opacity: 0,
         duration: 1.2,
         delay: 0.4,
-        ease: "circ.out",
         clearProps: "all",
         scrollTrigger: {
-            trigger: '.footer',
+            trigger: '.text-1',
             start: "top 85%",
             end: "top 85%",
-            toggleActions: "play none reverse none",
         }
     })
 
-    gsap.from('.contact-3', {
-        y: 20,
+    gsap.from('.fa-envelope', {
+        y: 50,
         rotateX: -90,
         skewX: 10,
         opacity: 0,
         duration: 1.2,
         delay: 0.5,
-        ease: "circ.out",
         clearProps: "all",
         scrollTrigger: {
-            trigger: '.footer',
+            trigger: '.text-1',
             start: "top 85%",
             end: "top 85%",
-            toggleActions: "play none reverse none",
         }
     })
 
-    gsap.from('.owner', {
-        y: 20,
+    gsap.from('.text-2', {
+        y: 50,
         rotateX: -90,
         skewX: 10,
         opacity: 0,
         duration: 1.2,
         delay: 0.6,
-        ease: "circ.out",
         clearProps: "all",
         scrollTrigger: {
-            trigger: '.footer',
+            trigger: '.text-1',
             start: "top 85%",
             end: "top 85%",
-            toggleActions: "play none reverse none",
         }
     })
+
+    gsap.from('.fa-instagram', {
+        y: 50,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.7,
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.text-1',
+            start: "top 85%",
+            end: "top 85%",
+        }
+    })
+
+    gsap.from('.text-3', {
+        y: 50,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.8,
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.text-1',
+            start: "top 85%",
+            end: "top 85%",
+        }
+    })
+
+    gsap.from('.photo', {
+        y: 50,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.9,
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.text-1',
+            start: "top 85%",
+            end: "top 85%",
+        }
+    })
+
+    gsap.from('.text-4', {
+        y: 50,
+        rotateX: -90,
+        skewX: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 1,
+        clearProps: "all",
+        scrollTrigger: {
+            trigger: '.text-1',
+            start: "top 85%",
+            end: "top 85%",
+        }
+    })
+
 });
 
 window.addEventListener('scroll', () => {

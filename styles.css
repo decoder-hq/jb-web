@@ -1048,6 +1048,11 @@ i {
     width: 65px;
   }
 
+  .info:hover {
+    color: white;
+    transform: scale(1);
+  }
+
   .owner:hover {
     transform: scale(1);
   }
