@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     header.classList.toggle('active', window.scrollY > 0);
 
-    gsap.registerPlugin(ScrollTrigger)
+    // gsap.registerPlugin(ScrollTrigger)
 
     ScrollTrigger.normalizeScroll(true);
 
